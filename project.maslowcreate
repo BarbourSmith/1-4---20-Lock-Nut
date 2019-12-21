@@ -10,6 +10,81 @@
             "topLevel": true,
             "allAtoms": [
                 {
+                    "atomType": "RegularPolygon",
+                    "name": "RegularPolygon",
+                    "x": 176,
+                    "y": 70,
+                    "uniqueID": 866280,
+                    "ioValues": [
+                        {
+                            "name": "number of sides",
+                            "ioValue": 6
+                        },
+                        {
+                            "name": "diameter",
+                            "ioValue": 0.4375
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 233,
+                    "y": 173,
+                    "uniqueID": 448990,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 0.26
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 412,
+                    "y": 101,
+                    "uniqueID": 484822,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 578,
+                    "y": 97,
+                    "uniqueID": 250252,
+                    "ioValues": [
+                        {
+                            "name": "height",
+                            "ioValue": 0.3125
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Color",
+                    "name": "Color",
+                    "x": 741,
+                    "y": 96,
+                    "uniqueID": 683596,
+                    "ioValues": [],
+                    "selectedColorIndex": "11"
+                },
+                {
+                    "atomType": "Add BOM Tag",
+                    "name": "Add BOM Tag",
+                    "x": 946,
+                    "y": 132,
+                    "uniqueID": 990298,
+                    "ioValues": [],
+                    "BOMitem": {
+                        "BOMitemName": "1/4-20 Locknut",
+                        "numberNeeded": 1,
+                        "costUSD": 0.0439,
+                        "source": "https://www.mcmaster.com/95615a120",
+                        "totalNeeded": 0
+                    }
+                },
+                {
                     "atomType": "Output",
                     "name": "Output",
                     "x": 1316,
@@ -17,7 +92,49 @@
                     "ioValues": []
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": 866280,
+                    "ap2ID": 484822
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 448990,
+                    "ap2ID": 484822
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 484822,
+                    "ap2ID": 250252
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 250252,
+                    "ap2ID": 683596
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 683596,
+                    "ap2ID": 990298
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 990298
+                }
+            ],
             "fileTypeVersion": 1
         }
     ],
